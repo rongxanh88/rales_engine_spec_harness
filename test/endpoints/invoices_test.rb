@@ -2,6 +2,7 @@ require "./test/test_helper"
 
 class InvoicesApiTest < ApiTest
   def test_loads_individual_invoices
+    skip
     #invoice_id => [customer_id, merchant_id]
     invoices = {
       117  => [22,  84],
@@ -17,6 +18,7 @@ class InvoicesApiTest < ApiTest
   end
 
   def test_loads_all_invoices
+    skip
     invoices = load_data("/api/v1/invoices")
     assert_equal 4843, invoices.count
     invoices.each do |inv|
@@ -28,6 +30,7 @@ class InvoicesApiTest < ApiTest
   # /find?query=parameters
 
   def invoice_find
+    skip
     {
       "id"          => 3811,
       "customer_id" => 782,
@@ -39,6 +42,7 @@ class InvoicesApiTest < ApiTest
   end
 
   def test_it_can_find_first_instance_by_id
+    skip
     invoice = load_data("/api/v1/invoices/find?id=#{invoice_find['id']}")
 
     invoice_find.each do |attribute|
@@ -47,6 +51,7 @@ class InvoicesApiTest < ApiTest
   end
 
   def test_it_can_find_first_instance_by_customer_id
+    skip
     invoice = load_data("/api/v1/invoices/find?customer_id=#{invoice_find['customer_id']}")
 
     invoice_find.each do |attribute|
@@ -55,6 +60,7 @@ class InvoicesApiTest < ApiTest
   end
 
   def test_it_can_find_first_instance_by_merchant_id
+    skip
     invoice = load_data("/api/v1/invoices/find?merchant_id=#{invoice_find['merchant_id']}")
     asc_first  = 51
     desc_first = 4751
@@ -63,6 +69,7 @@ class InvoicesApiTest < ApiTest
   end
 
   def test_it_can_find_first_instance_by_status
+    skip
     invoice = load_data("/api/v1/invoices/find?status=#{invoice_find['status']}")
     asc_first  = 1
     desc_first = 4843
@@ -71,6 +78,7 @@ class InvoicesApiTest < ApiTest
   end
 
   def test_it_can_find_first_instance_by_created_at
+    skip
     invoice = load_data("/api/v1/invoices/find?created_at=#{invoice_find['created_at']}")
 
     invoice_find.each do |attribute|
@@ -79,6 +87,7 @@ class InvoicesApiTest < ApiTest
   end
 
   def test_it_can_find_first_instance_by_updated_at
+    skip
     invoice = load_data("/api/v1/invoices/find?updated_at=#{invoice_find['updated_at']}")
 
     invoice_find.each do |attribute|
@@ -90,6 +99,7 @@ class InvoicesApiTest < ApiTest
   # /find_all?query=parameters
 
   def invoice_find_all
+    skip
     {
       "id"          => 441,
       "customer_id" => 91,
@@ -102,6 +112,7 @@ class InvoicesApiTest < ApiTest
   end
 
   def test_it_can_find_all_instances_by_id
+    skip
     invoices = load_data("/api/v1/invoices/find_all?id=#{invoice_find_all['id']}")
 
     assert_equal 1, invoices.count
@@ -112,6 +123,7 @@ class InvoicesApiTest < ApiTest
   end
 
   def test_it_can_find_all_instances_by_customer_id
+    skip
     invoices = load_data("/api/v1/invoices/find_all?customer_id=#{invoice_find_all['customer_id']}")
 
     assert_equal 4, invoices.count
@@ -122,6 +134,7 @@ class InvoicesApiTest < ApiTest
   end
 
   def test_it_can_find_all_instances_by_merchant_id
+    skip
     invoices = load_data("/api/v1/invoices/find_all?merchant_id=#{invoice_find_all['merchant_id']}")
     asc_first  = 66
     desc_first = 4833
@@ -131,6 +144,7 @@ class InvoicesApiTest < ApiTest
   end
 
   def test_it_can_find_all_instances_by_status
+    skip
     invoices = load_data("/api/v1/invoices/find_all?status=#{invoice_find_all['status']}")
 
     assert_equal 4843, invoices.count
@@ -141,6 +155,7 @@ class InvoicesApiTest < ApiTest
   end
 
   def test_it_can_find_all_instances_by_created_at
+    skip
     invoices = load_data("/api/v1/invoices/find_all?created_at=#{invoice_find_all['created_at']}")
 
     assert_equal 1, invoices.count
@@ -151,6 +166,7 @@ class InvoicesApiTest < ApiTest
   end
 
   def test_it_can_find_all_instances_by_updated_at
+    skip
     invoices = load_data("/api/v1/invoices/find_all?updated_at=#{invoice_find_all['updated_at']}")
 
     assert_equal 1, invoices.count

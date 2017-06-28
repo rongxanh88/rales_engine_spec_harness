@@ -1,6 +1,7 @@
 require "./test/test_helper"
 class MerchantsApiTest < ApiTest
   def test_loads_a_collection_of_items_associated_with_one_merchant
+    skip
     merchant_id = 99
     asc_first  = 2397
     desc_first = 2438
@@ -18,6 +19,7 @@ class MerchantsApiTest < ApiTest
   end
 
   def test_loads_a_collection_of_invoices_associated_with_one_merchant
+    skip
     merchant_id = 2
     asc_first  = 45
     desc_first = 4789

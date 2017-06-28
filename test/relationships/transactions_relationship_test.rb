@@ -1,6 +1,7 @@
 require "./test/test_helper"
 class TransactionApiTest < ApiTest
   def test_loads_the_associated_invoice
+    skip
     transaction_id = 1031
 
     invoice = load_data("/api/v1/transactions/#{transaction_id}/invoice")

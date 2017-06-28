@@ -1,6 +1,7 @@
 require "./test/test_helper"
 class CustomerApiRelationshipTest < ApiTest
   def test_loads_a_collection_of_invoices_associated_with_one_customer
+    skip
     customer_id = 309
     asc_id        = 1602
     desc_id       = 1607
@@ -21,6 +22,7 @@ class CustomerApiRelationshipTest < ApiTest
   end
 
   def test_loads_a_collection_of_transaction_associated_with_one_customer
+    skip
     customer_id = 29
     asc_id      = 168
     desc_id     = 175

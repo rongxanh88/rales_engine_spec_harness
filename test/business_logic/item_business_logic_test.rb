@@ -1,6 +1,7 @@
 require "./test/test_helper"
 class ItemApiBusinessLogicTest < ApiTest
   def test_loads_the_best_day_associated_with_one_item
+    skip
     item_id_one  = 1099
     item_id_two  = 2198
     best_day_one = load_data("/api/v1/items/#{item_id_one}/best_day")
@@ -11,6 +12,7 @@ class ItemApiBusinessLogicTest < ApiTest
   end
 
   def test_loads_a_variable_number_of_top_items_ranked_by_total_number_sold
+    skip
     group_size_one = 1
     group_size_two = 5
 
@@ -30,6 +32,7 @@ class ItemApiBusinessLogicTest < ApiTest
   end
 
   def test_loads_a_variable_number_of_top_merchants_ranked_by_total_revenue
+    skip
     group_size_one = 1
     group_size_two = 3
 

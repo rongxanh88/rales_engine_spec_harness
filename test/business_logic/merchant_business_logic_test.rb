@@ -3,6 +3,7 @@ require "date"
 
 class SingleMerchantApiBusinessLogicTest < ApiTest
   def test_loads_the_favorite_customer_associated_with_one_merchant
+    skip
     merchant_id_one = 2
     merchant_id_two = 80
 
@@ -14,6 +15,7 @@ class SingleMerchantApiBusinessLogicTest < ApiTest
   end
 
   def test_loads_the_customers_with_pending_invoices_associated_with_one_merchant
+    skip
     merchant_id_one = 17
     merchant_id_two = 77
 
@@ -40,6 +42,7 @@ class SingleMerchantApiBusinessLogicTest < ApiTest
   end
 
   def test_loads_the_total_revenue_across_all_transactions_associated_with_one_merchant_by_date
+    skip
     merchant_id_one = 30
     merchant_id_two = 3
     date_one        = "2012-03-16 11:55:05"
@@ -55,7 +58,7 @@ class SingleMerchantApiBusinessLogicTest < ApiTest
 end
 
 class AllMerchantsApiBusinessLogicTest < ApiTest
-  def test_loads_total_revenue_for_a_date_across_all_merchants  
+  def test_loads_total_revenue_for_a_date_across_all_merchants
     date_one = "2012-03-16 11:55:05"
     date_two = "2012-03-07 10:54:55"
 
@@ -67,6 +70,7 @@ class AllMerchantsApiBusinessLogicTest < ApiTest
   end
 
   def test_loads_a_variable_number_of_top_merchants_ranked_by_total_revenue
+    skip
     group_size_one = 1
     group_size_two = 7
 
@@ -86,6 +90,7 @@ class AllMerchantsApiBusinessLogicTest < ApiTest
   end
 
   def test_loads_a_variable_number_of_top_merchants_ranked_by_total_items_sold
+    skip
     group_size_one = 1
     group_size_two = 8
 

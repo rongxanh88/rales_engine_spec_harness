@@ -1,6 +1,7 @@
 require "./test/test_helper"
 class InvoicesApiTest < ApiTest
   def test_loads_a_collection_of_transactions_associated_with_one_invoice
+    skip
     invoice_id = rand(1..4845)
 
     data = load_data("/api/v1/invoices/#{invoice_id}/transactions")
@@ -12,6 +13,7 @@ class InvoicesApiTest < ApiTest
   end
 
   def test_loads_a_collection_of_items_associated_with_one_invoice
+    skip
     invoice_id          = 4000
     invoice_merchant_id = 22
 
@@ -25,6 +27,7 @@ class InvoicesApiTest < ApiTest
   end
 
   def test_loads_a_collection_of_invoice_items_associated_with_one_invoice
+    skip
     invoice_id = rand(1..4845)
 
     invoice_items = load_data("/api/v1/invoices/#{invoice_id}/invoice_items")
@@ -36,6 +39,7 @@ class InvoicesApiTest < ApiTest
   end
 
   def test_loads_the_associated_customer
+    skip
     invoice_id = 999
 
     customer = load_data("/api/v1/invoices/#{invoice_id}/customer")
@@ -47,6 +51,7 @@ class InvoicesApiTest < ApiTest
   end
 
   def test_loads_the_associated_merchant
+    skip
     invoice_id = 1510
 
     merchant = load_data("/api/v1/invoices/#{invoice_id}/merchant")
