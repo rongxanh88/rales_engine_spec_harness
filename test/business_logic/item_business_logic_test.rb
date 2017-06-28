@@ -1,12 +1,10 @@
 require "./test/test_helper"
 class ItemApiBusinessLogicTest < ApiTest
   def test_loads_the_best_day_associated_with_one_item
-    skip
     item_id_one  = 1099
     item_id_two  = 2198
     best_day_one = load_data("/api/v1/items/#{item_id_one}/best_day")
     best_day_two = load_data("/api/v1/items/#{item_id_two}/best_day")
-
     assert_equal "2012-03-22T03:55:09.000Z", best_day_one["best_day"]
     assert_equal "2012-03-20T23:57:05.000Z", best_day_two["best_day"]
   end

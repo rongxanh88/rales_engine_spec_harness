@@ -1,7 +1,6 @@
 require "./test/test_helper"
 class CustomerApiBusinessLogicTest < ApiTest
   def test_loads_the_favorite_merchant_associated_with_one_customer
-    skip
     customer_id_one = 66
     customer_id_two = 33
     fav_merch_one   = load_data("/api/v1/customers/#{customer_id_one}/favorite_merchant")
