@@ -16,7 +16,6 @@ class MerchantsApiTest < ApiTest
   end
 
   def test_loads_all_merchants
-    skip
     merchants = load_data("/api/v1/merchants")
     assert_equal 100, merchants.count
     merchants.each do |merchant|
