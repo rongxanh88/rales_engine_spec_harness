@@ -2,7 +2,6 @@ require "./test/test_helper"
 
 class InvoiceItemsApiTest < ApiTest
   def test_loads_individual_invoice_items
-    skip
     #invoice_item_id => [item_id, invoice_id, quantity, unit_price]
     invoice_items = {
       10110 => [1223, 2277, 9, "219.16"],
@@ -20,7 +19,6 @@ class InvoiceItemsApiTest < ApiTest
   end
 
   def test_loads_all_invoice_items
-    skip
     invoice_items = load_data("/api/v1/invoice_items")
     assert_equal 21687, invoice_items.count
     invoice_items.each do |invoice_item|
@@ -32,7 +30,6 @@ class InvoiceItemsApiTest < ApiTest
   # /find?query=parameters
 
   def invoice_find
-    skip
     {
       "id"         => 20097,
       "item_id"    => 574,
@@ -45,7 +42,6 @@ class InvoiceItemsApiTest < ApiTest
   end
 
   def test_it_can_find_first_instance_by_id
-    skip
     invoice_item = load_data("/api/v1/invoice_items/find?id=#{invoice_find['id']}")
 
     invoice_find.each do |attribute|
@@ -54,7 +50,6 @@ class InvoiceItemsApiTest < ApiTest
   end
 
   def test_it_can_find_first_instance_by_item_id
-    skip
     invoice_item = load_data("/api/v1/invoice_items/find?item_id=#{invoice_find['item_id']}")
     asc_first  = 5822
     desc_first = 20097
@@ -63,7 +58,6 @@ class InvoiceItemsApiTest < ApiTest
   end
 
   def test_it_can_find_first_instance_by_invoice_id
-    skip
     invoice_item = load_data("/api/v1/invoice_items/find?invoice_id=#{invoice_find['invoice_id']}")
     asc_first  = 20093
     desc_first = 20098
@@ -72,7 +66,6 @@ class InvoiceItemsApiTest < ApiTest
   end
 
   def test_it_can_find_first_instance_by_quantity
-    skip
     invoice_item = load_data("/api/v1/invoice_items/find?quantity=#{invoice_find['quantity']}")
     asc_first  = 21
     desc_first = 21662
@@ -81,7 +74,6 @@ class InvoiceItemsApiTest < ApiTest
   end
 
   def test_it_can_find_first_instance_by_unit_price
-    skip
     invoice_item = load_data("/api/v1/invoice_items/find?unit_price=#{invoice_find['unit_price']}")
     asc_first  = 822
     desc_first = 20097
@@ -90,7 +82,6 @@ class InvoiceItemsApiTest < ApiTest
   end
 
   def test_it_can_find_first_instance_by_created_at
-    skip
     invoice_item = load_data("/api/v1/invoice_items/find?created_at=#{invoice_find['created_at']}")
     asc_first  = 20062
     desc_first = 20147
@@ -99,7 +90,6 @@ class InvoiceItemsApiTest < ApiTest
   end
 
   def test_it_can_find_first_instance_by_updated_at
-    skip
     invoice_item = load_data("/api/v1/invoice_items/find?updated_at=#{invoice_find['updated_at']}")
     asc_first  = 20062
     desc_first = 20147
@@ -111,7 +101,6 @@ class InvoiceItemsApiTest < ApiTest
   # /find_all?query=parameters
 
   def invoice_find_all
-    skip
     {
       "id"         => 20097,
       "item_id"    => 574,
@@ -125,7 +114,6 @@ class InvoiceItemsApiTest < ApiTest
 
 
   def test_it_can_find_all_instances_by_id
-    skip
     invoice_items = load_data("/api/v1/invoice_items/find_all?id=#{invoice_find_all['id']}")
 
     assert_equal 1, invoice_items.count
@@ -136,7 +124,6 @@ class InvoiceItemsApiTest < ApiTest
   end
 
   def test_it_can_find_all_instances_by_item_id
-    skip
     invoice_items = load_data("/api/v1/invoice_items/find_all?item_id=#{invoice_find_all['item_id']}")
 
     assert_equal 5, invoice_items.count
@@ -147,7 +134,6 @@ class InvoiceItemsApiTest < ApiTest
   end
 
   def test_it_can_find_all_instances_by_invoice_id
-    skip
     invoice_items = load_data("/api/v1/invoice_items/find_all?invoice_id=#{invoice_find_all['invoice_id']}")
 
     assert_equal 6, invoice_items.count
@@ -158,7 +144,6 @@ class InvoiceItemsApiTest < ApiTest
   end
 
   def test_it_can_find_all_instances_by_quantity
-    skip
     invoice_items = load_data("/api/v1/invoice_items/find_all?quantity=#{invoice_find_all['quantity']}")
 
     assert_equal 2164, invoice_items.count
@@ -169,7 +154,6 @@ class InvoiceItemsApiTest < ApiTest
   end
 
   def test_it_can_find_all_instances_by_unit_price
-    skip
     invoice_items = load_data("/api/v1/invoice_items/find_all?unit_price=#{invoice_find_all['unit_price']}")
 
     assert_equal 9, invoice_items.count
@@ -180,7 +164,6 @@ class InvoiceItemsApiTest < ApiTest
   end
 
   def test_it_can_find_all_instances_by_time_values
-    skip
     invoice_items = load_data("/api/v1/invoice_items/find_all?created_at=#{invoice_find_all['created_at']}")
 
     assert_equal 86, invoice_items.count
@@ -191,7 +174,6 @@ class InvoiceItemsApiTest < ApiTest
   end
 
   def test_it_can_find_all_instances_by_time_values
-    skip
     invoice_items = load_data("/api/v1/invoice_items/find_all?updated_at=#{invoice_find_all['updated_at']}")
 
     assert_equal 86, invoice_items.count

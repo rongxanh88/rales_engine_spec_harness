@@ -1,7 +1,6 @@
 require "./test/test_helper"
 class InvoiceItemsApiTest < ApiTest
   def test_loads_the_associated_item
-    skip
     invoice_item_id = 99
 
     item = load_data("/api/v1/invoice_items/#{invoice_item_id}/item")
@@ -11,7 +10,6 @@ class InvoiceItemsApiTest < ApiTest
   end
 
   def test_loads_the_associated_invoice
-    skip
     invoice_item_id = 7
 
     invoice = load_data("/api/v1/invoice_items/#{invoice_item_id}/invoice")

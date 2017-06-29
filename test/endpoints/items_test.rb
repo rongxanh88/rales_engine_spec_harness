@@ -72,7 +72,6 @@ class ItemsApiTest < ApiTest
   end
 
   def test_it_can_find_first_instance_by_unit_price
-    skip
     item = load_data("/api/v1/items/find?unit_price=#{item_find['unit_price']}")
 
     item_find.each do |attribute|
@@ -150,7 +149,6 @@ class ItemsApiTest < ApiTest
   end
 
   def test_it_can_find_all_instances_by_unit_price
-    skip
     items = load_data("/api/v1/items/find_all?unit_price=#{item_find_all['unit_price']}")
 
     assert_equal 1, items.count
